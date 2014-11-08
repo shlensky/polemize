@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Polemize2</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <title>Polemize</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <base href="/">
 </head>
-<body>
+<body ng-app="polemize">
 
-<%= yield %>
+<!-- Static content of Ruby on Rails -->
+<div ng-hide="true"><%= yield %></div>
 
+<!-- Dynamic content of AngularJS -->
+<div ui-view></div>
+
+<%= javascript_include_tag 'application' %>
 </body>
 </html>

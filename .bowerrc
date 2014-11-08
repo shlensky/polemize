@@ -1,4 +1,4 @@
 {
-  "directory": "vendor/assets",
+  "directory": "vendor/assets/bower_components",
   "json": "bower.json"
 }
