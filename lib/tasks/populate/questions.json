@@ -1,8 +1,10 @@
 [
   {
     "slug": "ebooks-or-paper-books",
-    "title": "Should Tablets Replace Textbooks in K-12 Schools?",
+    "title": "Должны ли электронные учебники заменить бумажные?",
     "description": "<p>Publishing for the K-12 school market is an $8 billion industry, with three companies - McGraw-Hill, Pearson, and Houghton Mifflin Harcourt - capturing about 85% of this market. Tablets are a $72 billion industry with 42% of US adults owning a tablet. As tablets have become more prevalent, a new debate has formed over whether K-12 school districts should switch from print textbooks to digital textbooks on tablets.</p><p>Proponents of tablets say that they are supported by most teachers and students, are much lighter than print textbooks, and improve standardized test scores. They say tablets can hold hundreds of textbooks, save the environment by lowering the amount of printing, increase student interactivity and creativity, and that digital textbooks are cheaper than print textbooks.</p><p>Opponents of tablets say that they are expensive, too distracting for students, easy to break, and costly/time-consuming to fix. They say that tablets contribute to eyestrain, headaches, and blurred vision, increase the excuses available for students not doing their homework, require costly Wi-Fi networks, and become quickly outdated as new technologies emerge.</p>",
+    "pros_title": "Аргументы в пользу электронных учебников",
+    "cons_title": "Аргументы против электронных учебников",
     "pros_attributes": [
       {
         "title": "Tablets help students learn more material faster",
@@ -34,8 +36,10 @@
   },
   {
     "slug": "legalization-of-abortion",
-    "title": "Should Abortion Be Legal?",
+    "title": "Должны ли аборты быть легальными?",
     "description": "<p>The debate over whether or not abortion should be a legal option continues to divide Americans long after the US Supreme Court’s 7-2 decision on Roe v. Wade declared the procedure a \"fundamental right\" on Jan. 22, 1973.</p><p>Proponents, identifying themselves as pro-choice, contend that choosing abortion is a woman's right that should not be limited by governmental or religious authority, and which outweighs any right claimed for an embryo or fetus. They say that pregnant women will resort to unsafe illegal abortions if there is no legal option.</p><p>Opponents, identifying themselves as pro-life, contend that personhood begins at conception, and therefore abortion is the immoral killing of an innocent human being. They say abortion inflicts suffering on the unborn child, and that it is unfair to allow abortion when couples who cannot biologically conceive are waiting to adopt.</p>",
+    "pros_title": "Аргументы за легализацию абортов",
+    "cons_title": "Аргументы против легализации абортов",
     "pros_attributes": [
       {
         "title": "The US Supreme Court has declared abortion to be a \"fundamental right\" guaranteed by the US Constitution",
@@ -67,8 +71,10 @@
   },
   {
     "slug": "vegetarianism",
-    "title": "Should People Become Vegetarian?",
+    "title": "Стоит ли людям становиться вегетарианцами?",
     "description": "<p>In 2012, the United States Department of Agriculture (USDA) estimated that Americans ate an average of 52.3 pounds of beef, 57.4 pounds of chicken, and 43.5 pounds of pork, per person. Vegetarians, about 5% of the US population, do not eat meat (including poultry and seafood). The USDA includes meat as part of a balanced diet, but it also states that a vegetarian diet can meet \"the recommended dietary allowances for nutrients\"./<p><p>Many proponents of vegetarianism say that eating meat harms health, wastes resources, causes deforestation, and creates pollution. They often argue that killing animals for food is cruel and unethical since non-animal food sources are plentiful.</p><p>Many opponents of a vegetarian diet say that meat consumption is healthful and humane, and that producing vegetables causes many of the same environmental problems as producing meat. They also argue that humans have been eating and enjoying meat for 2.3 million years.</p>",
+    "pros_title": "Аргументы за вегетарианство",
+    "cons_title": "Аргументы против вегетарианства",
     "pros_attributes": [
       {
         "title": "It is cruel and unethical to kill animals for food when vegetarian options are available",

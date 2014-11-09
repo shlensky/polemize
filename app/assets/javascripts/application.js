@@ -11,7 +11,11 @@
 // about supported directives.
 //
 //= require angular/angular
+//= require angular-animate/angular-animate
+//= require angular-aria/angular-aria
+//= require hammerjs/hammer
 //= require angular-sanitize/angular-sanitize
+//= require angular-material/angular-material
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-activerecord/src/angular-activerecord
 //= require angular-rails-templates

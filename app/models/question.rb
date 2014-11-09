@@ -5,6 +5,8 @@ class Question
   field :slug, type: String
   field :title, type: String
   field :description, type: String
+  field :pros_title, type: String
+  field :cons_title, type: String
 
   has_many :pros, dependent: :destroy
   has_many :cons, dependent: :destroy

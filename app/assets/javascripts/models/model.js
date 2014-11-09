@@ -10,6 +10,7 @@
                 options.headers = options.headers || {};
 
                 options.headers['Accept'] = 'application/json';
+                options.url = model.$url() + '.json';
 
                 return ActiveRecord.sync.apply(this, [operation, model, options]);
             }

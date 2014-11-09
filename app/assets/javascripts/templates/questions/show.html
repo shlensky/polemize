@@ -1,28 +1,55 @@
-<div ng-controller="QuestionsShowController as ctrl">
-  <h1>{{ctrl.question.title}}</h1>
-  <div ng-bind-html="ctrl.question.description"></div>
-  <table>
-    <tr>
-      <th>Аргументы за</th>
-      <th>Аргументы против</th>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li ng-repeat="pro in ctrl.question.pros">
-            <h2>{{pro.title}}</h2>
-            <p>{{pro.description}}</p>
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li ng-repeat="con in ctrl.question.cons">
-            <h2>{{con.title}}</h2>
-            <p>{{con.description}}</p>
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-</div>
+<md-content class="md-padding" ng-controller="QuestionsShowController as ctrl">
+  <section class="md-whiteframe-z1">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span>{{ctrl.question.title}}</span>
+      </div>
+    </md-toolbar>
+
+    <md-content>
+      <img src="http://placehold.it/1200x250" alt="Placeholder image" style="width: 100%">
+      <md-content class="md-padding">
+        <div ng-bind-html="ctrl.question.description"></div>
+      </md-content>
+    </md-content>
+
+    <md-content layout="vertical" layout-md="horizontal">
+      <div md-theme="teal" flex>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <span>{{ctrl.question.pros_title}}</span>
+          </div>
+        </md-toolbar>
+
+        <md-list>
+          <md-item ng-repeat="argument in ctrl.question.pros">
+            <md-item-content>
+              <div class="md-tile-content">
+                <h3>{{argument.title}}</h3>
+                <p>{{argument.description}}</p>
+              </div>
+            </md-item-content>
+          </md-item>
+        </md-list>
+      </div>
+
+      <div md-theme="deep-orange" flex>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <span>{{ctrl.question.cons_title}}</span>
+          </div>
+        </md-toolbar>
+        <md-list>
+          <md-item ng-repeat="argument in ctrl.question.cons">
+            <md-item-content>
+              <div class="md-tile-content">
+                <h3>{{argument.title}}</h3>
+                <p>{{argument.description}}</p>
+              </div>
+            </md-item-content>
+          </md-item>
+        </md-list>
+      </div>
+    </md-content>
+  </section>
+</md-content>

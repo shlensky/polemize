@@ -9,6 +9,7 @@
      */
     angular.module('polemize', [
         'ngSanitize',
+        'ngMaterial',
         'ui.router',
         'templates',
         'ActiveRecord'

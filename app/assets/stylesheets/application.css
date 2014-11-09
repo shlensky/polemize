@@ -10,6 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require angular-material/angular-material
+ *= require angular-material/themes/deep-orange-theme
+ *= require angular-material/themes/teal-theme
  *= require_tree .
  *= require_self
  */
+body {
+    min-width: 500px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
