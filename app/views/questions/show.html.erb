@@ -1,0 +1,30 @@
+<h1><%= @question.title %></h1>
+<%= @question.description.html_safe %>
+<table>
+  <tr>
+    <th>Аргументы за</th>
+    <th>Аргументы против</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <% @question.pros.each do |pro| %>
+          <li>
+            <h2><%= pro.title %></h2>
+            <p><%= pro.description %></p>
+          </li>
+        <% end %>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <% @question.cons.each do |con| %>
+          <li>
+            <h2><%= con.title %></h2>
+            <p><%= con.description %></p>
+          </li>
+        <% end %>
+      </ul>
+    </td>
+  </tr>
+</table>

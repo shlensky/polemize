@@ -22,6 +22,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'mongoid', '4.0.0'
 gem 'bower-rails', '0.9.1'
 gem 'angular-rails-templates', '0.1.3'
 
