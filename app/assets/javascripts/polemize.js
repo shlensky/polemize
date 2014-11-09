@@ -8,8 +8,10 @@
      * Main module of the application.
      */
     angular.module('polemize', [
+        'ngSanitize',
         'ui.router',
-        'templates'
+        'templates',
+        'ActiveRecord'
     ]);
 
 }(window.angular));

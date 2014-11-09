@@ -1,0 +1,28 @@
+<div ng-controller="QuestionsShowController as ctrl">
+  <h1>{{ctrl.question.title}}</h1>
+  <div ng-bind-html="ctrl.question.description"></div>
+  <table>
+    <tr>
+      <th>Аргументы за</th>
+      <th>Аргументы против</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li ng-repeat="pro in ctrl.question.pros">
+            <h2>{{pro.title}}</h2>
+            <p>{{pro.description}}</p>
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li ng-repeat="con in ctrl.question.cons">
+            <h2>{{con.title}}</h2>
+            <p>{{con.description}}</p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>

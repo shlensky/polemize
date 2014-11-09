@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require angular/angular
+//= require angular-sanitize/angular-sanitize
 //= require angular-ui-router/release/angular-ui-router
+//= require angular-activerecord/src/angular-activerecord
 //= require angular-rails-templates
 //= require polemize
 //= require_tree .

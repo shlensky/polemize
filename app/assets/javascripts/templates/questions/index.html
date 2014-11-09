@@ -1,0 +1,9 @@
+<h1>Список вопросов</h1>
+<div ng-controller="QuestionsIndexController as ctrl">
+  <ul>
+    <li ng-repeat="question in ctrl.questions">
+      <a ui-sref="questions.show({slug: question.slug})">{{question.title}}</a>
+      <div ng-bind-html="question.description"></div>
+    </li>
+  </ul>
+</div>
