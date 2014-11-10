@@ -13,7 +13,9 @@
 <div ng-hide="true"><%= yield %></div>
 
 <!-- Dynamic content of AngularJS -->
-<div ui-view></div>
+<div class="ui-view-container">
+  <div ui-view></div>
+</div>
 
 <%= javascript_include_tag 'application' %>
 </body>
