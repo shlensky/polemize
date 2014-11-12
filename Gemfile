@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid', '4.0.0'
 gem 'bower-rails', '0.9.1'
 gem 'angular-rails-templates', '0.1.3'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-vkontakte'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
