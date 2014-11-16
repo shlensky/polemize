@@ -1,32 +1,67 @@
 <md-content class="md-padding" ng-controller="QuestionsShowController as ctrl">
-  <section class="md-whiteframe-z1">
+  <md-progress-circular mode="indeterminate" ng-show="ctrl.loading"></md-progress-circular>
+
+  <section class="md-whiteframe-z1" ng-if="!ctrl.loading">
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <span>{{ctrl.question.title}}</span>
+        <span>{{::ctrl.question.title}}</span>
       </div>
     </md-toolbar>
 
     <md-content>
       <img src="http://placehold.it/1200x250" alt="Placeholder image" style="width: 100%">
       <md-content class="md-padding">
-        <div ng-bind-html="ctrl.question.description"></div>
+        <div ng-bind-html="::ctrl.question.description"></div>
       </md-content>
+    </md-content>
+
+    <md-content layout="vertical" layout-sm="horizontal" layout-align="space-around" style="padding: 16px;">
+      <div layout="vertical" layout-align="space-around center" md-theme="teal">
+        <div>
+          {{ctrl.question.pro_votes_count}}
+          <ng-pluralize count="ctrl.question.pro_votes_count"
+                        when="{zero: '', one: 'сторонник', few: 'сторонника', many: 'сторонников'}"></ng-pluralize>
+        </div>
+        <p>
+          <md-progress-circular mode="determinate" value="{{ctrl.question.$proVotesPercentage()}}">
+          </md-progress-circular>
+        </p>
+        <md-button class="md-raised md-primary" aria-label="Проголосовать за"
+                   ng-click="ctrl.saveVote({answer: 'pro'})"
+                   ng-disabled="ctrl.vote.answer == 'pro'">
+          Проголосовать "За"
+        </md-button>
+      </div>
+
+      <div layout="vertical" layout-align="space-around center" md-theme="deep-orange">
+        <div>
+          {{ctrl.question.con_votes_count}}
+          <ng-pluralize count="ctrl.question.con_votes_count"
+                        when="{zero: '', one: 'противник', few: 'противника', many: 'противников'}"></ng-pluralize>
+        </div>
+        <p><md-progress-circular mode="determinate" value="{{ctrl.question.$conVotesPercentage()}}"></md-progress-circular></p>
+        <md-button class="md-raised md-primary" aria-label="Проголосовать против"
+                   ng-click="ctrl.saveVote({answer: 'con'})"
+                   ng-disabled="ctrl.vote.answer == 'con'">
+          Проголосовать "Против"
+        </md-button>
+      </div>
     </md-content>
 
     <md-content layout="vertical" layout-md="horizontal">
       <div md-theme="teal" flex>
         <md-toolbar>
           <div class="md-toolbar-tools">
-            <span>{{ctrl.question.pros_title}}</span>
+            <span>{{::ctrl.question.pros_title}}</span>
           </div>
         </md-toolbar>
 
         <md-list>
-          <md-item ng-repeat="argument in ctrl.question.pros">
+          <md-item ng-repeat="argument in ::ctrl.question.pros">
             <md-item-content>
               <div class="md-tile-content">
-                <h3>{{argument.title}}</h3>
-                <p>{{argument.description}}</p>
+                <h3>{{::argument.title}}</h3>
+                <p>{{::argument.description}}</p>
               </div>
             </md-item-content>
           </md-item>
@@ -36,15 +71,15 @@
       <div md-theme="deep-orange" flex>
         <md-toolbar>
           <div class="md-toolbar-tools">
-            <span>{{ctrl.question.cons_title}}</span>
+            <span>{{::ctrl.question.cons_title}}</span>
           </div>
         </md-toolbar>
         <md-list>
-          <md-item ng-repeat="argument in ctrl.question.cons">
+          <md-item ng-repeat="argument in ::ctrl.question.cons">
             <md-item-content>
               <div class="md-tile-content">
-                <h3>{{argument.title}}</h3>
-                <p>{{argument.description}}</p>
+                <h3>{{::argument.title}}</h3>
+                <p>{{::argument.description}}</p>
               </div>
             </md-item-content>
           </md-item>

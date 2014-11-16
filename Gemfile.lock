@@ -116,6 +116,8 @@ GEM
       omniauth-oauth2 (~> 1.1)
     optionable (0.2.0)
     origin (2.1.1)
+    quiet_assets (1.0.3)
+      railties (>= 3.1, < 5.0)
     rack (1.6.0.beta)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -192,6 +194,7 @@ DEPENDENCIES
   omniauth
   omniauth-twitter
   omniauth-vkontakte
+  quiet_assets
   rails (= 4.2.0.beta4)
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)

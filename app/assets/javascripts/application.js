@@ -10,7 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require lodash/dist/lodash.js
 //= require angular/angular
+//= require angular-i18n/angular-locale_ru-ru.js
 //= require angular-animate/angular-animate
 //= require angular-aria/angular-aria
 //= require hammerjs/hammer

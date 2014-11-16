@@ -6,4 +6,6 @@ class User
   field :uid, type: String
   field :name, type: String
   field :image, type: String
+
+  has_many :votes, dependent: :destroy
 end

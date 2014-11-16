@@ -9,8 +9,18 @@
 </head>
 <body ng-app="polemize">
 
+<% if current_user %>
+  Вы вошли как <%= current_user.name %>
+  <%= image_tag current_user.image %>
+  <%= link_to 'выход', signout_path, target: '_self' %>
+<% else %>
+  Войти через
+  <%= link_to 'Twitter', '/auth/twitter', target: '_self' %>
+  <%= link_to 'Vkontakte', '/auth/vkontakte', target: '_self' %>
+<% end %>
+
 <!-- Static content of Ruby on Rails -->
-<div ng-hide="true"><%= yield %></div>
+<div ng-hide="true" ng-cloak><%= yield %></div>
 
 <!-- Dynamic content of AngularJS -->
 <div class="ui-view-container">

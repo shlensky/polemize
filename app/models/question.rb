@@ -10,6 +10,7 @@ class Question
 
   has_many :pros, dependent: :destroy
   has_many :cons, dependent: :destroy
+  has_many :votes, dependent: :destroy
 
   accepts_nested_attributes_for :pros, :cons
 
@@ -17,5 +18,13 @@ class Question
 
   def to_param
     slug
+  end
+
+  def pro_votes_count
+    votes.where(answer: 'pro').count
+  end
+
+  def con_votes_count
+    votes.where(answer: 'con').count
   end
 end
