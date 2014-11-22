@@ -11,6 +11,9 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
+  def show
+  end
+
   private
 
   def find_or_create_user(auth)

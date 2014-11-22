@@ -3,7 +3,7 @@
 
     var app = angular.module('polemize');
 
-    app.controller('QuestionsShowController', function($stateParams, Question, Vote) {
+    app.controller('QuestionsShowController', function($stateParams, Question, Vote, Session) {
         var ctrl = this;
 
         /**
@@ -45,8 +45,10 @@
          * @returns {$q.promise}
          */
         ctrl.saveVote = function(attributes) {
-            return ctrl.vote.$save(attributes).then(function() {
-                ctrl.question.$fetch();
+            Session.currentUser().then(function() {
+                return ctrl.vote.$save(attributes).then(function() {
+                    ctrl.question.$fetch();
+                });
             });
         };
 

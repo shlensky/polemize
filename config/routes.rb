@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :questions, only: [:index, :show], param: :slug do
     resources :votes, only: [:index, :create, :update]
   end
+  resource :session, only: [:show]
 
 
   # Example resource route with options:
