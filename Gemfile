@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid', '4.0.0'
 gem 'bower-rails', '0.9.1'
 gem 'angular-rails-templates', '0.1.3'
+gem 'ngannotate-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
