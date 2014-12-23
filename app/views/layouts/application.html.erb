@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= content_for?(:title) ? yield(:title) : 'Polemize' %></title>
+  <title><%=
+      content_for?(:title) ?
+              yield(:title) :
+              'Аргументы за и против, результаты голосования, интернет голосование, онлайн'
+  %></title>
+  <meta name="description" content="Ресурс с вопросами и результатами, к ним аргументы за и против – позволяющий осознано сделать свой выбор и проголосовать  онлайн.">
+  <meta name="keywords" content="аргументы за, аргументы против, результаты голосования, интернет голосование, онлайн">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
