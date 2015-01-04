@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def ensure_authorization
-    render nothing: true, status: :unauthorized unless current_user.present?
+    render_unauthorized unless current_user.present?
+  end
+
+  def render_unauthorized
+    render nothing: true, status: :unauthorized
   end
 end
