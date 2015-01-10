@@ -7,7 +7,7 @@
     </md-toolbar>
 
     <md-content ng-repeat="question in ctrl.questions">
-      <img src="http://placehold.it/1200x250" alt="Placeholder image" style="width: 100%">
+      <img ng-src="{{question.image}}" alt="{{question.title}}" style="width: 100%" ng-if="question.image">
       <md-content class="md-padding">
         <h3>{{question.title}}</h3>
 

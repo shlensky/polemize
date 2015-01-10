@@ -8,6 +8,8 @@ class Question
   field :pros_title, type: String
   field :cons_title, type: String
 
+  mount_uploader :image, ImageUploader
+
   has_many :pros, dependent: :destroy
   has_many :cons, dependent: :destroy
   has_many :votes, dependent: :destroy

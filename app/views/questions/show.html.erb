@@ -1,5 +1,6 @@
 <% title @question.title %>
 <h1><%= @question.title %></h1>
+<%= image_tag @question.image.url, alt: @question.title if @question.image.present? %>
 <%= @question.description.html_safe %>
 
 <h2><%= @question.pros_title %></h2>

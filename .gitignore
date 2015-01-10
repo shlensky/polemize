@@ -12,3 +12,4 @@
 /tmp
 /vendor/assets
 /config/secrets.yml
+/public/uploads
