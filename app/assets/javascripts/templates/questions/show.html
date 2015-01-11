@@ -1,7 +1,7 @@
-<md-content class="md-padding" ng-controller="QuestionsShowController as ctrl">
+<md-content class="md-whiteframe-z1" ng-controller="QuestionsShowController as ctrl">
   <md-progress-circular mode="indeterminate" ng-show="ctrl.loading"></md-progress-circular>
 
-  <section class="md-whiteframe-z1" ng-if="!ctrl.loading">
+  <section ng-if="!ctrl.loading">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <span>{{::ctrl.question.title}}</span>

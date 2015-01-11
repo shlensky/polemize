@@ -14,13 +14,25 @@
  *= require angular-material/themes/pink-theme
  *= require angular-material/themes/teal-theme
  *= require angular-material/themes/blue-grey-theme
+ *= require angular-material/themes/cyan-theme
  *= require_tree .
  *= require_self
  */
 body {
     min-width: 500px;
+    padding-top: 75px;
+}
+
+.app-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.top-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
 }
 
 .ui-view-container {
@@ -43,4 +55,8 @@ body {
 }
 [ui-view].ng-leave-active {
     opacity: 0;
+}
+
+.img-circle {
+    border-radius: 50%;
 }
