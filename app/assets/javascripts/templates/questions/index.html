@@ -9,6 +9,7 @@
     <md-content ng-repeat="question in ctrl.questions">
       <img ng-src="{{question.image}}" alt="{{question.title}}" style="width: 100%" ng-if="question.image">
       <md-content class="md-padding">
+        <small ng-if="question.category_title">Категория: {{question.category_title}}</small>
         <h3>{{question.title}}</h3>
 
         <div ng-bind-html="question.description"></div>

@@ -10,6 +10,7 @@ class Question
 
   mount_uploader :image, ImageUploader
 
+  belongs_to :category
   has_many :pros, dependent: :destroy
   has_many :cons, dependent: :destroy
   has_many :votes, dependent: :destroy

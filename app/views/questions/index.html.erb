@@ -4,6 +4,7 @@
 <% @questions.each do |question| %>
   <li>
     <%= link_to question.title, question, target: '_self' %>
+    <%= "Категория:  #{question.category.title}" if question.category.present? %>
     <%= image_tag question.image.url, alt: question.title if question.image.present? %>
     <%= question.description.html_safe %>
   </li>
