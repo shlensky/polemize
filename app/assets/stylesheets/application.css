@@ -11,10 +11,6 @@
  * file per style scope.
  *
  *= require angular-material/angular-material
- *= require angular-material/themes/pink-theme
- *= require angular-material/themes/teal-theme
- *= require angular-material/themes/blue-grey-theme
- *= require angular-material/themes/cyan-theme
  *= require_tree .
  *= require_self
  */

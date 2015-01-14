@@ -13,7 +13,7 @@
         <h3>{{question.title}}</h3>
 
         <div ng-bind-html="question.description"></div>
-        <div layout="horizontal" layout-align="end">
+        <div layout="row" layout-align="end">
           <md-button ui-sref="questions.show({slug: question.slug})" class="md-raised md-primary" aria-label="Подробнее" style="width: 10em">
             Подробнее
           </md-button>

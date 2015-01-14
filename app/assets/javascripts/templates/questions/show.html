@@ -15,8 +15,8 @@
       </md-content>
     </md-content>
 
-    <md-content layout="vertical" layout-sm="horizontal" layout-align="space-around" style="padding: 16px;">
-      <div layout="vertical" layout-align="space-around center" md-theme="teal">
+    <md-content layout="row" layout-sm="column" layout-align="space-around" style="padding: 16px;">
+      <div layout="column" layout-align="space-around center" md-theme="teal">
         <div>
           {{ctrl.question.pro_votes_count}}
           <ng-pluralize count="ctrl.question.pro_votes_count"
@@ -33,7 +33,7 @@
         </md-button>
       </div>
 
-      <div layout="vertical" layout-align="space-around center" md-theme="pink">
+      <div layout="column" layout-align="space-around center" md-theme="pink">
         <div>
           {{ctrl.question.con_votes_count}}
           <ng-pluralize count="ctrl.question.con_votes_count"
@@ -48,7 +48,7 @@
       </div>
     </md-content>
 
-    <md-content layout="vertical" layout-md="horizontal">
+    <md-content layout="column" layout-gt-sm="row">
       <div md-theme="teal" flex>
         <md-toolbar>
           <div class="md-toolbar-tools">
