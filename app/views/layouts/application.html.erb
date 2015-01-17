@@ -15,8 +15,8 @@
 </head>
 <body ng-app="polemize">
 
-<md-toolbar class="top-toolbar md-whiteframe-z1" md-theme="cyan">
-  <h2 class="md-toolbar-tools app-container">
+<md-toolbar class="top-toolbar md-whiteframe-z2" md-theme="cyan">
+  <h2 class="md-toolbar-tools">
     <div flex>
       <%= link_to 'Wojt', '/' %>
     </div>
@@ -26,7 +26,8 @@
         <%= current_user.name %>
         <small>(<%= link_to 'выход', signout_path, target: '_self' %>)</small>
       </div>
-      <div><%= image_tag current_user.image, class: 'img-circle' %></div>
+      &nbsp;
+      <%= image_tag current_user.image, class: 'img-circle' %>
     <% else %>
       <div>
         Войти через
@@ -41,8 +42,12 @@
 <div ng-hide="true" ng-cloak><%= yield %></div>
 
 <!-- Dynamic content of AngularJS -->
-<div class="ui-view-container app-container">
-  <div ui-view></div>
+<div layout="column" layout-fill>
+  <section layout="row" flex>
+    <md-content flex>
+      <div ui-view></div>
+    </md-content>
+  </section>
 </div>
 
 <%= javascript_include_tag 'application' %>

@@ -1,16 +1,11 @@
-<md-content class="md-whiteframe-z1" ng-controller="QuestionsShowController as ctrl">
+<md-content ng-controller="QuestionsShowController as ctrl" class="md-padding">
   <md-progress-circular mode="indeterminate" ng-show="ctrl.loading"></md-progress-circular>
 
-  <section ng-if="!ctrl.loading">
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <span>{{::ctrl.question.title}}</span>
-      </div>
-    </md-toolbar>
-
+  <md-content ng-if="!ctrl.loading" class="md-whiteframe-z1 img-rounded">
     <md-content>
       <img ng-src="{{ctrl.question.image}}" alt="{{ctrl.question.title}}" style="width: 100%" ng-if="ctrl.question.image">
       <md-content class="md-padding">
+        <h2 class="title">{{::ctrl.question.title}}</h2>
         <div ng-bind-html="::ctrl.question.description"></div>
       </md-content>
     </md-content>
@@ -86,5 +81,5 @@
         </md-list>
       </div>
     </md-content>
-  </section>
+  </md-content>
 </md-content>
