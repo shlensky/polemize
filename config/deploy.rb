@@ -55,7 +55,9 @@ namespace :sitemap do
   task :generate do
     on roles(:app) do
       within release_path do
-        execute :rake, 'sitemap:generate'
+        with rails_env: :production do
+          execute :rake, 'sitemap:generate'
+        end
       end
     end
   end
