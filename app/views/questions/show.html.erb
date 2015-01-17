@@ -10,7 +10,7 @@
 <ul>
   <% @question.pros.each do |pro| %>
     <li>
-      <h2><%= pro.title %></h2>
+      <h3><%= pro.title %></h3>
       <p><%= pro.description %></p>
     </li>
   <% end %>
@@ -20,7 +20,7 @@
 <ul>
   <% @question.cons.each do |con| %>
     <li>
-      <h2><%= con.title %></h2>
+      <h3><%= con.title %></h3>
       <p><%= con.description %></p>
     </li>
   <% end %>

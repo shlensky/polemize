@@ -20,6 +20,10 @@ body {
     max-height: 100%;
 }
 
+.scroll {
+    overflow: scroll;
+}
+
 .img-circle {
     border-radius: 50%;
 }
