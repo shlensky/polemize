@@ -26,7 +26,7 @@ set :log_level, :debug
 set :linked_files, %w{config/mongoid.yml config/secrets.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{log tmp/pids tmp/cache public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache public/uploads public/sitemaps}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -48,4 +48,15 @@ namespace :deploy do
   before 'deploy:updated', 'deploy:bower'
 
   after :publishing, 'puma:restart'
+end
+
+namespace :sitemap do
+  desc 'Generate sitemap'
+  task :generate do
+    on roles(:app) do
+      within release_path do
+        execute :rake, 'sitemap:generate'
+      end
+    end
+  end
 end

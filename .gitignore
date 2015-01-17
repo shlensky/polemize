@@ -13,3 +13,4 @@
 /vendor/assets
 /config/secrets.yml
 /public/uploads
+/public/sitemaps
