@@ -7,6 +7,8 @@ class Question
   field :description, type: String
   field :pros_title, type: String
   field :cons_title, type: String
+  field :meta_description, type: String
+  field :meta_keywords, type: String
 
   mount_uploader :image, ImageUploader
 
