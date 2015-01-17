@@ -1,0 +1,17 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-md')">
+  <md-content class="md-padding">
+    <h2 class="title">Навигация</h2>
+    <ul class="sidebar-menu">
+      <% sidebar_links.each do |item| %>
+      <li>
+        <a ui-sref="<%= item[:sref] %>"
+           ui-sref-active="current"
+           href="<%= item[:href] %>"
+           md-ink-ripple="#00bcd4">
+          <%= item[:name] %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </md-content>
+</md-sidenav>

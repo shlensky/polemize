@@ -25,4 +25,10 @@ module ApplicationHelper
       content_for?(:keywords) ? content_for(:keywords) : default
     end
   end
+
+  def sidebar_links
+    [
+        {name: 'Главная', href: root_path, sref: 'root'}
+    ]
+  end
 end

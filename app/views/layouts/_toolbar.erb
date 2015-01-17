@@ -1,6 +1,7 @@
-<md-toolbar class="md-whiteframe-z2" md-theme="cyan">
+<md-toolbar class="md-whiteframe-z2" md-theme="cyan" ng-controller="ToolbarController as ctrl">
   <h2 class="md-toolbar-tools">
     <div flex>
+      <md-button ng-click="ctrl.toggleSidebar()" hide-gt-md>&nbsp;&#x2630;&nbsp;</md-button>
       <%= link_to 'Wojt', '/' %>
     </div>
 

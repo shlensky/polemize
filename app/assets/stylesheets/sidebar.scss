@@ -1,0 +1,19 @@
+ul.sidebar-menu {
+  padding: 0;
+  list-style: none;
+  li {
+    a {
+      display: block;
+      padding: 0 16px;
+      font-weight: 200;
+      color: #333;
+      line-height: 48px;
+      text-decoration: none;
+      position: relative;
+
+      &:hover, &.current {
+        background-color: #eee;
+      }
+    }
+  }
+}
