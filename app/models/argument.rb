@@ -6,5 +6,5 @@ class Argument
 
   belongs_to :question
 
-  validates_presence_of :title, :description, :question_id
+  validates_presence_of :title, :description, :question
 end
