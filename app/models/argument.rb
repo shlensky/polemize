@@ -5,4 +5,6 @@ class Argument
   field :description, type: String
 
   belongs_to :question
+
+  validates_presence_of :title, :description, :question_id
 end

@@ -21,6 +21,8 @@ class Question
 
   accepts_nested_attributes_for :pros, :cons
 
+  validates_presence_of :slug, :title, :description, :pros_title, :cons_title
+
   scope :ordered, -> { order_by(title: :asc) }
   scope :enabled, -> { where(enabled: true) }
 
