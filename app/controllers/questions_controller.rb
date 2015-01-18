@@ -1,9 +1,9 @@
 class QuestionsController < ApplicationController
   def index
-    @questions = Question.ordered
+    @questions = Question.enabled.ordered
   end
 
   def show
-    @question = Question.find_by(slug: params[:slug])
+    @question = Question.enabled.find_by(slug: params[:slug])
   end
 end

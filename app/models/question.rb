@@ -2,6 +2,7 @@ class Question
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  field :enabled, type: Boolean
   field :slug, type: String
   field :title, type: String
   field :description, type: String
@@ -21,6 +22,7 @@ class Question
   accepts_nested_attributes_for :pros, :cons
 
   scope :ordered, -> { order_by(title: :asc) }
+  scope :enabled, -> { where(enabled: true) }
 
   def to_param
     slug

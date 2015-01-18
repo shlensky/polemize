@@ -12,7 +12,7 @@ end
 # using "resources :pages" in config/routes.rb. This will also
 # automatically set <lastmod> to the date and time in page.updated_at:
 #
-sitemap_for Question.all
+sitemap_for Question.enabled
 
 # For products with special sitemap name and priority, and link to comments:
 #
