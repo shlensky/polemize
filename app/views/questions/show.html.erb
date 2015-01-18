@@ -11,7 +11,7 @@
   <% @question.pros.each do |pro| %>
     <li>
       <h3><%= pro.title %></h3>
-      <p><%= pro.description %></p>
+      <p><%= pro.description.html_safe %></p>
     </li>
   <% end %>
 </ul>
@@ -21,7 +21,7 @@
   <% @question.cons.each do |con| %>
     <li>
       <h3><%= con.title %></h3>
-      <p><%= con.description %></p>
+      <p><%= con.description.html_safe %></p>
     </li>
   <% end %>
 </ul>

@@ -56,7 +56,7 @@
             <md-item-content>
               <div class="md-tile-content">
                 <h3>{{::argument.title}}</h3>
-                <p>{{::argument.description}}</p>
+                <p ng-bind-html="::argument.description"></p>
               </div>
             </md-item-content>
           </md-item>
@@ -74,7 +74,7 @@
             <md-item-content>
               <div class="md-tile-content">
                 <h3>{{::argument.title}}</h3>
-                <p>{{::argument.description}}</p>
+                <p ng-bind-html="::argument.description"></p>
               </div>
             </md-item-content>
           </md-item>
