@@ -11,6 +11,10 @@
                 url: '/',
                 templateUrl: 'questions/index.html'
             })
+            .state('page', {
+                url: '/pages/:slug',
+                templateUrl: 'pages/show.html'
+            })
             .state('questions', {
                 url: '/questions',
                 abstract : true,

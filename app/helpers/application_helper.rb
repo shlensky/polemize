@@ -28,7 +28,22 @@ module ApplicationHelper
 
   def sidebar_links
     [
-        {name: 'Главная', href: root_path, sref: 'root'}
+        {name: 'Главная', href: root_path, sref: 'root'},
+        {
+            name: 'Полезная информация',
+            href: page_path(slug: 'poleznaya_informatsiya'),
+            sref: 'page({slug: "poleznaya_informatsiya"})'
+        },
+        {
+            name: 'Правила сервиса',
+            href: page_path(slug: 'pravila_servisa'),
+            sref: 'page({slug: "pravila_servisa"})'
+        },
+        {
+            name: 'Техподдержка',
+            href: page_path(slug: 'tekhpodderzhka'),
+            sref: 'page({slug: "tekhpodderzhka"})'
+        }
     ]
   end
 end

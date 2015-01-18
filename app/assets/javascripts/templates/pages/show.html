@@ -1,0 +1,8 @@
+<md-content ng-controller="PageController as ctrl" class="md-padding">
+  <md-progress-circular md-mode="indeterminate" ng-show="ctrl.loading"></md-progress-circular>
+
+  <md-content ng-if="!ctrl.loading" class="md-whiteframe-z1 img-rounded md-padding">
+    <h2 class="title">{{::ctrl.page.title}}</h2>
+    <div ng-bind-html="::ctrl.page.body"></div>
+  </md-content>
+</md-content>

@@ -20,6 +20,15 @@ body {
     max-height: 100%;
 }
 
+a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+}
+
 .scroll {
     overflow: scroll;
 }
