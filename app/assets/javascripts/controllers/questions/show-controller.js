@@ -3,7 +3,7 @@
 
     var app = angular.module('polemize');
 
-    app.controller('QuestionsShowController', function($stateParams, Question, Vote, Session) {
+    app.controller('QuestionsShowController', function($stateParams, $window, Question, Vote, Session) {
         var ctrl = this;
 
         /**
@@ -15,6 +15,11 @@
          * @type {object}
          */
         ctrl.question = {};
+
+        /**
+         * @type {string}
+         */
+        ctrl.currentUrl = $window.location.href;
 
         /**
          * @returns {$q.promise}

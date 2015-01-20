@@ -11,6 +11,7 @@
         'ngSanitize',
         'ngMaterial',
         'ui.router',
+        'ngSocial',
         'templates',
         'ActiveRecord'
     ]);

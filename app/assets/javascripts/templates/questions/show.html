@@ -5,6 +5,16 @@
     <md-content>
       <img ng-src="{{ctrl.question.image}}" alt="{{ctrl.question.title}}" style="width: 100%" ng-if="ctrl.question.image">
       <md-content class="md-padding">
+        <div class="text-right">
+          <div ng-social-buttons
+              data-url="ctr.currentUrl"
+              data-title="ctrl.question.title"
+              data-description="ctrl.question.description"
+              data-image="ctrl.question.image">
+            <div ng-include="'common/social.html'"></div>
+          </div>
+        </div>
+
         <h2 class="title">{{::ctrl.question.title}}</h2>
         <div ng-bind-html="::ctrl.question.description"></div>
       </md-content>

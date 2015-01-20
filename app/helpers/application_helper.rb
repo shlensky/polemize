@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def absolute_url(path)
+    request.protocol + request.host_with_port + path
+  end
+
   def title(page_title = nil)
     if page_title
       content_for(:title, page_title)

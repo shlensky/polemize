@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require angular-material/angular-material
+ *= require angular-social/angular-social.css
  *= require_tree .
  *= require_self
  */
@@ -39,6 +40,10 @@ a:hover, a:active, a:focus {
 
 .img-rounded {
     border-radius: 6px;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .title {
