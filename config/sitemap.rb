@@ -13,6 +13,7 @@ end
 # automatically set <lastmod> to the date and time in page.updated_at:
 #
 sitemap_for Question.enabled
+sitemap_for Page.all
 
 # For products with special sitemap name and priority, and link to comments:
 #
