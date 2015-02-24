@@ -3,7 +3,7 @@
 
     var app = angular.module('polemize');
 
-    app.controller('QuestionsShowController', function($stateParams, $window, Question, Vote, Session) {
+    app.controller('QuestionsShowController', function($stateParams, $window, $mdDialog, Question, Vote, Session) {
         var ctrl = this;
 
         /**
@@ -52,6 +52,33 @@
         ctrl.saveVote = function(attributes) {
             Session.currentUser().then(function() {
                 return ctrl.vote.$save(attributes).then(function() {
+                    ctrl.question.$fetch();
+                });
+            });
+        };
+
+        ctrl.addArgument = function(attributes) {
+            Session.currentUser().then(function() {
+                $mdDialog.show({
+                    templateUrl: 'questions/add-argument.html',
+                    controllerAs: 'modalCtrl',
+                    controller: function($mdDialog, Argument) {
+                        var modalCtrl = this;
+
+                        modalCtrl.argument = new Argument(attributes);
+                        modalCtrl.argument.$question = ctrl.question;
+
+                        modalCtrl.cancel = function() {
+                            $mdDialog.cancel();
+                        };
+
+                        modalCtrl.save = function() {
+                            modalCtrl.argument.$save().then(function() {
+                                $mdDialog.hide(modalCtrl.argument);
+                            });
+                        };
+                    }
+                }).then(function() {
                     ctrl.question.$fetch();
                 });
             });

@@ -1,0 +1,28 @@
+<md-dialog aria-label="Добавление аргумента">
+  <md-toolbar>
+    <h2 class="md-toolbar-tools">
+      Добавление аргумента
+    </h2>
+  </md-toolbar>
+
+  <md-content>
+    <md-input-container>
+      <label>Заголовок</label>
+      <input ng-model="modalCtrl.argument.title">
+    </md-input-container>
+
+    <md-input-container>
+      <label>Описание</label>
+      <textarea ng-model="modalCtrl.argument.description" md-maxlength="350"></textarea>
+    </md-input-container>
+  </md-content>
+
+  <div class="md-actions" layout="row">
+    <md-button ng-click="modalCtrl.cancel()">
+      Отмена
+    </md-button>
+    <md-button ng-click="modalCtrl.save()" class="md-primary">
+      Сохранить
+    </md-button>
+  </div>
+</md-dialog>

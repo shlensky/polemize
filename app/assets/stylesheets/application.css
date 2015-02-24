@@ -46,6 +46,10 @@ a:hover, a:active, a:focus {
     text-align: right;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .title {
     color: #999999;
     font-weight: 200;

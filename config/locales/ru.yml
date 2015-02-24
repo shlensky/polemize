@@ -1,0 +1,6 @@
+ru:
+  mongoid:
+    attributes:
+      argument:
+        title: Заголовок
+        description: Описание

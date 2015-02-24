@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :questions, only: [:index, :show], param: :slug do
     resources :votes, only: [:index, :create, :update]
+    resources :arguments, only: [:create]
   end
   resources :pages, only: [:show], param: :slug
   resource :session, only: [:show]

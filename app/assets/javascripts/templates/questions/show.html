@@ -60,13 +60,21 @@
             <span>{{::ctrl.question.pros_title}}</span>
           </div>
         </md-toolbar>
-
         <md-list>
-          <md-item ng-repeat="argument in ::ctrl.question.pros">
+          <md-item ng-repeat="argument in ctrl.question.pros">
             <md-item-content>
               <div class="md-tile-content">
                 <h3>{{::argument.title}}</h3>
                 <p ng-bind-html="::argument.description"></p>
+              </div>
+            </md-item-content>
+          </md-item>
+          <md-item>
+            <md-item-content>
+              <div class="md-tile-content text-center">
+                <md-button class="md-primary" ng-click="ctrl.addArgument({_type: 'Pro'})">
+                  &nbsp;Добавить аргумент&nbsp;
+                </md-button>
               </div>
             </md-item-content>
           </md-item>
@@ -80,11 +88,20 @@
           </div>
         </md-toolbar>
         <md-list>
-          <md-item ng-repeat="argument in ::ctrl.question.cons">
+          <md-item ng-repeat="argument in ctrl.question.cons">
             <md-item-content>
               <div class="md-tile-content">
                 <h3>{{::argument.title}}</h3>
                 <p ng-bind-html="::argument.description"></p>
+              </div>
+            </md-item-content>
+          </md-item>
+          <md-item>
+            <md-item-content>
+              <div class="md-tile-content text-center">
+                <md-button class="md-primary" ng-click="ctrl.addArgument({_type: 'Con'})">
+                  &nbsp;Добавить аргумент&nbsp;
+                </md-button>
               </div>
             </md-item-content>
           </md-item>
