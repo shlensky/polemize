@@ -62,7 +62,7 @@
                 $mdDialog.show({
                     templateUrl: 'questions/add-argument.html',
                     controllerAs: 'modalCtrl',
-                    controller: function($mdDialog, Argument) {
+                    controller: ['$mdDialog', 'Argument', function($mdDialog, Argument) {
                         var modalCtrl = this;
 
                         modalCtrl.argument = new Argument(attributes);
@@ -77,7 +77,7 @@
                                 $mdDialog.hide(modalCtrl.argument);
                             });
                         };
-                    }
+                    }]
                 }).then(function() {
                     ctrl.question.$fetch();
                 });
