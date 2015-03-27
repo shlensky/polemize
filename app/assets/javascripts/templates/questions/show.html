@@ -62,12 +62,17 @@
         </md-toolbar>
         <md-list>
           <md-item ng-repeat="argument in ctrl.question.pros">
-            <md-item-content>
+            <md-item-content ng-class="{'md-whiteframe-z5': argument.$checked}" class="transition">
               <div class="md-tile-content">
-                <h3>{{::argument.title}}</h3>
-                <p ng-bind-html="::argument.description"></p>
+                <md-checkbox ng-model="argument.$checked" style="margin-left: 0">
+                  <h3>{{::argument.title}}</h3>
+                </md-checkbox>
+                <p ng-bind-html="::argument.description"
+                   ng-click="argument.$checked = !argument.$checked"
+                   class="pointer"></p>
               </div>
             </md-item-content>
+            <md-divider></md-divider>
           </md-item>
           <md-item>
             <md-item-content>
@@ -89,12 +94,17 @@
         </md-toolbar>
         <md-list>
           <md-item ng-repeat="argument in ctrl.question.cons">
-            <md-item-content>
+            <md-item-content ng-class="{'md-whiteframe-z5': argument.$checked}" class="transition">
               <div class="md-tile-content">
-                <h3>{{::argument.title}}</h3>
-                <p ng-bind-html="::argument.description"></p>
+                <md-checkbox ng-model="argument.$checked" style="margin-left: 0">
+                  <h3>{{::argument.title}}</h3>
+                </md-checkbox>
+                <p ng-bind-html="::argument.description"
+                   ng-click="argument.$checked = !argument.$checked"
+                   class="pointer"></p>
               </div>
             </md-item-content>
+            <md-divider></md-divider>
           </md-item>
           <md-item>
             <md-item-content>
