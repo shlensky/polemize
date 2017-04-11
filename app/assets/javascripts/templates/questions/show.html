@@ -1,4 +1,25 @@
 <md-content ng-controller="QuestionsShowController as ctrl" class="md-padding">
+  <md-content class="md-padding md-whiteframe-z1" style="position: fixed; width: 100%; z-index: 99;" ng-if="ctrl.won || ctrl.lost">
+    <h3 class="title">
+      вы выбрали,
+      <md-button class="md-raised md-primary" aria-label="Проголосовать за"
+                 ng-click="ctrl.saveVote({answer: 'pro'})"
+                 ng-disabled="ctrl.vote.answer == 'pro'"
+                 ng-if="ctrl.won"
+                 md-theme="teal">
+        Проголосовать "За"
+      </md-button>
+
+      <md-button class="md-raised md-primary" aria-label="Проголосовать против"
+                 ng-click="ctrl.saveVote({answer: 'con'})"
+                 ng-disabled="ctrl.vote.answer == 'con'"
+                 ng-if="ctrl.lost"
+                 md-theme="pink">
+        Проголосовать "Против"
+      </md-button>
+    </h3>
+  </md-content>
+
   <md-progress-circular md-mode="indeterminate" ng-show="ctrl.loading"></md-progress-circular>
 
   <md-content ng-if="!ctrl.loading" class="md-whiteframe-z1 img-rounded">
@@ -64,7 +85,7 @@
           <md-item ng-repeat="argument in ctrl.question.pros">
             <md-item-content ng-class="{'md-whiteframe-z5': argument.$checked}" class="transition">
               <div class="md-tile-content">
-                <md-checkbox ng-model="argument.$checked" style="margin-left: 0">
+                <md-checkbox ng-model="argument.$checked" ng-change="ctrl.recalcDecision()" style="margin-left: 0">
                   <h3>{{::argument.title}}</h3>
                 </md-checkbox>
                 <p ng-bind-html="::argument.description"
@@ -96,7 +117,7 @@
           <md-item ng-repeat="argument in ctrl.question.cons">
             <md-item-content ng-class="{'md-whiteframe-z5': argument.$checked}" class="transition">
               <div class="md-tile-content">
-                <md-checkbox ng-model="argument.$checked" style="margin-left: 0">
+                <md-checkbox ng-model="argument.$checked" ng-change="ctrl.recalcDecision()" style="margin-left: 0">
                   <h3>{{::argument.title}}</h3>
                 </md-checkbox>
                 <p ng-bind-html="::argument.description"

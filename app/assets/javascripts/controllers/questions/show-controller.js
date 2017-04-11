@@ -84,6 +84,15 @@
             });
         };
 
+        ctrl.recalcDecision = function() {
+            var prosCount = _.filter(ctrl.question.pros, '$checked').length;
+            var consCount = _.filter(ctrl.question.cons, '$checked').length;
+
+            ctrl.won = prosCount > consCount;
+            ctrl.lost = prosCount < consCount;
+            ctrl.draw = prosCount === consCount;
+        };
+
         loadQuestion().then(loadVote).then(function() {
             ctrl.loading = false;
         });
