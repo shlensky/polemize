@@ -3,6 +3,8 @@
     <div flex>
       <md-button ng-click="ctrl.toggleSidebar()" hide-gt-md>&nbsp;&#x2630;&nbsp;</md-button>
       <%= link_to 'Wojt', '/' %>
+
+      <iframe style="vertical-align: middle; margin-left: 1rem" frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/quickpay/button-widget?account=41001665433871&quickpay=small&yamoney-payment-type=on&button-text=05&button-size=m&button-color=white&targets=%D0%BD%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0&default-sum=100&fio=on&mail=on&successURL=http%3A%2F%2Fwojt.ru%2Fpages%2Ftekhpodderzhka" width="185" height="36"></iframe>
     </div>
 
     <% if current_user %>
@@ -14,9 +16,8 @@
       <%= image_tag current_user.image, class: 'img-circle' %>
     <% else %>
       <div>
-        Войти через
-        <em><%= link_to 'Twitter', '/auth/twitter', target: '_self' %></em>,
-        <em><%= link_to 'Vkontakte', '/auth/vkontakte', target: '_self' %></em>
+        <!--em><%= link_to 'Twitter', '/auth/twitter', target: '_self' %></em-->
+        <em><%= link_to 'Вход', '/auth/vkontakte', target: '_self' %></em>
       </div>
     <% end %>
   </h2>
